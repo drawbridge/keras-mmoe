@@ -49,7 +49,7 @@ Use this BibTeX to cite the repository:
   year={2018},
   publisher={Github},
   journal={GitHub repository},
-  howpublished={\url{https://github.com/alvin319/keras-mmoe}},
+  howpublished={\url{https://github.com/drawbridge/keras-mmoe}},
 }
 ```
 

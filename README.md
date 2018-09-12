@@ -30,12 +30,13 @@ python census_income_demo.py
 ```
 
 ## Notes
-- Due to time and resource constraints, the result is comparable but not exactly the same as the result from the paper
+- Due to ambiguity in the paper and time and resource constraints, we unfortunately can't reproduce the exact results in the paper
 
 ## Contributing
 Contributions to this repository are welcome. Examples of things you can contribute:
 - Performance improvements by re-writing the model in TensorFlow, PyTorch, or MXNet
 - Improve the census income benchmark to be as close as the one from the paper
+- Improve the synthetic benchmark to be as close as the one from the paper
 - Training on other public datasets for different benchmarks
 - Accuracy improvements
 - Visualizations

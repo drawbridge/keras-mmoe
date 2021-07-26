@@ -16,7 +16,7 @@ The code is documented and designed to be extended relatively easy. If you plan 
 
 ### Requirements
 - Python 3.6
-- Other libraries such as TensorFlow and Keras listed in `requirements.txt`
+- Other libraries such as TensorFlow and Scikit-learn listed in `requirements.txt`
 
 ### Installation
 1. Clone the repository

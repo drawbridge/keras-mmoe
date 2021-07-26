@@ -11,13 +11,13 @@ import random
 import pandas as pd
 import numpy as np
 import tensorflow as tf
-from keras import backend as K
-from keras.optimizers import Adam
-from keras.initializers import VarianceScaling
-from keras.layers import Input, Dense
-from keras.models import Model
-from keras.utils import to_categorical
-from keras.callbacks import Callback
+from tensorflow.keras import backend as K
+from tensorflow.keras.optimizers import Adam
+from tensorflow.keras.initializers import VarianceScaling
+from tensorflow.keras.layers import Input, Dense
+from tensorflow.keras.models import Model
+from tensorflow.keras.utils import to_categorical
+from tensorflow.keras.callbacks import Callback
 from sklearn.metrics import roc_auc_score
 
 from mmoe import MMoE
@@ -31,10 +31,7 @@ np.random.seed(SEED)
 random.seed(SEED)
 
 # Fix TensorFlow graph-level seed for reproducibility
-tf.set_random_seed(SEED)
-tf_session = tf.Session(graph=tf.get_default_graph())
-K.set_session(tf_session)
-
+tf.random.set_seed(SEED)
 
 # Simple callback to print out ROC-AUC
 class ROCCallback(Callback):

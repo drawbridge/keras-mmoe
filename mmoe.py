@@ -6,9 +6,10 @@ Licensed under the MIT License (see LICENSE for details)
 Written by Alvin Deng
 """
 
-from keras import backend as K
-from keras import activations, initializers, regularizers, constraints
-from keras.engine.topology import Layer, InputSpec
+import tensorflow as tf
+from tensorflow.keras import backend as K
+from tensorflow.keras import activations, initializers, regularizers, constraints
+from tensorflow.keras.layers import Layer, InputSpec
 
 
 class MMoE(Layer):
@@ -169,7 +170,7 @@ class MMoE(Layer):
         final_outputs = []
 
         # f_{i}(x) = activation(W_{i} * x + b), where activation is ReLU according to the paper
-        expert_outputs = K.tf.tensordot(a=inputs, b=self.expert_kernels, axes=1)
+        expert_outputs = tf.tensordot(a=inputs, b=self.expert_kernels, axes=1)
         # Add the bias term to the expert weights if necessary
         if self.use_expert_bias:
             expert_outputs = K.bias_add(x=expert_outputs, bias=self.expert_bias)

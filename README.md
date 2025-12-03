@@ -22,7 +22,7 @@ The code is documented and designed to be extended relatively easy. If you plan 
 1. Clone the repository
 2. Install dependencies
 ```
-pip install -r requirements.txt
+pip install -r requirements.txt（更改pandas库为1.1.5）
 ```
 3. Run the example code
 ```
